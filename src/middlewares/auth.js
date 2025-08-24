@@ -8,7 +8,7 @@ const {
 module.exports = (req, res, next) => {
   try {
     let token = req.headers.authorization;
-    token = token.split(' ').pop();
+    token = token?.split(' ').pop();
     const decoded = verifyToken(token);
     req.auth = decoded.data;
     next();

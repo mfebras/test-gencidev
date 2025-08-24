@@ -1,0 +1,166 @@
+{
+  "/notes": {
+    "get": {
+      "tags": ["Note"],
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "description": "Multi lang value: id, en. Example ?lang=id"
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "required": false,
+          "description": "Example ?limit=10"
+        },
+        {
+          "name": "page",
+          "in": "query",
+          "required": false,
+          "description": "Example ?page=1"
+        },
+        {
+          "name": "sort",
+          "in": "query",
+          "required": false,
+          "description": "Example ?sort=id"
+        },
+        {
+          "name": "order",
+          "in": "query",
+          "required": false,
+          "description": "Example ?order=ASC"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "OK",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NoteListResponse"
+              }
+            }
+          }
+        }
+      }
+    },
+    "post": {
+      "tags": ["Note"],
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "requestBody": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/NoteStore"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "200": {
+          "description": "OK",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NoteStoreResponse"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "/notes/{id}": {
+    "put": {
+      "tags": ["Note"],
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": false,
+          "description": "Example ?id=1"
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "description": "Multi lang value: id, en. Example ?lang=id"
+        }
+      ],
+      "requestBody": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/NoteStore"
+            }
+          }
+        },
+        "required": true
+      },
+      "responses": {
+        "200": {
+          "description": "OK",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NoteStoreResponse"
+              }
+            }
+          }
+        }
+      }
+    },
+    "delete": {
+      "tags": ["Note"],
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": false,
+          "description": "Example ?id=1"
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "description": "Multi lang value: id, en. Example ?lang=id"
+        }
+      ],
+      "responses": {
+        "200": {
+          "description": "OK",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BaseResponse"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

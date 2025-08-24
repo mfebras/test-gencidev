@@ -1,0 +1,66 @@
+{
+  "NoteListResponse" : {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "boolean",
+        "example": true
+      },
+      "message": {
+        "type": "string",
+        "example": "Success"
+      },
+      "data": {
+        "type": "object",
+        "example": {
+          "list": [
+            {
+              "id": "1",
+              "title": "My Title",
+              "description": "Lorem ipsum",
+              "created_at": "2025-08-24 10:00:52",
+              "updated_at": "2025-08-24 10:00:52"
+            }
+          ],
+          "total_rows": "1"
+        }
+      }
+    }
+  },
+  "NoteStore": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "example": "My Title"
+      },
+      "description": {
+        "type": "string",
+        "example": "Lorem ipsum"
+      }
+    }
+  },
+  "NoteStoreResponse" : {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "boolean",
+        "example": true
+      },
+      "message": {
+        "type": "string",
+        "example": "Success"
+      },
+      "data": {
+        "type": "object",
+        "example": {
+          "id": "1",
+          "title": "My Title",
+          "description": "Lorem ipsum",
+          "created_at": "2025-08-24 10:00:52",
+          "updated_at": "2025-08-24 10:00:52"
+        }
+      }
+    }
+  }
+}

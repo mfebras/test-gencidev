@@ -1,4 +1,4 @@
-const { getToken, logger, TABLES } = require('../../utils');
+const { getToken, TABLES } = require('../../utils');
 const { createUser } = require('./user_factory');
 const DB = require('../../database');
 

@@ -1,3 +1,4 @@
 exports.TABLES = {
-  USER: 'users'
+  USER: 'users',
+  NOTE: 'notes',
 }

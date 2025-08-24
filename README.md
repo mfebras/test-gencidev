@@ -33,8 +33,6 @@ Test with Express Js v5
 |   |   ├── locales     (multi language dictionary)
 |   |   |	├── en.json
 |   |
-|   ├── listeners	(Rabbit MQ consumer)
-|   |
 |   ├── middlewares
 |   |
 |   ├── modules
