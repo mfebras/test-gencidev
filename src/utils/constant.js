@@ -1,0 +1,3 @@
+exports.TABLES = {
+  USER: 'users'
+}

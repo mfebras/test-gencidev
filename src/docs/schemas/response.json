@@ -1,0 +1,19 @@
+{
+  "BaseResponse" : {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "boolean",
+        "example": true
+      },
+      "message": {
+        "type": "string",
+        "example": "Success"
+      },
+      "data": {
+        "type": ["object", "array", "null"],
+        "example": "null"
+      }
+    }
+  }
+}

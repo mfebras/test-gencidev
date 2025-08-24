@@ -1,0 +1,12 @@
+const { TABLES } = require('../../utils')
+
+exports.seed = async function(knex) {
+  const data = []
+  for (let i = 0; i < 100; i++) {
+    data.push({
+      key: ''
+    })
+  }
+
+  await knex(TABLES.USER).insert(data)
+}
