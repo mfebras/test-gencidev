@@ -34,7 +34,6 @@
   "validator.password.confirmation": "Konfirmasi password tidak cocok",
   "validator.required": "{{ field }} tidak boleh kosong",
   "validator.required_if": "{{ field }} tidak boleh kosong jika {{ field2 }} bernilai {{ value }}",
-  "voucher.invalid": "Kode voucher tidak valid atau kadaluarsa",
   "_404": "Url tidak ditemukan",
   "_500": "Terjadi kesalahan pada server"
 }
